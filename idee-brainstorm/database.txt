@@ -1,0 +1,7 @@
+Recette 
+- Ingrédients
+- Etapes de préparation
+- temps de preparation 
+- avis 
+
+comme ca on peut filtrer par temps de prepa et popularité et allergies 
