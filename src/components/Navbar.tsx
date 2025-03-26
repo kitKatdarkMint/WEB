@@ -3,6 +3,9 @@ import { useState } from "react";
 
 function Navbar() {
   const [showLogin, setShowLogin] = useState(false);
+  const handleLoginSubmit = () => {
+    setShowLogin(false);
+  };
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
@@ -69,19 +72,34 @@ function Navbar() {
           type="button"
           className="btn"
           onClick={() => setShowLogin(!showLogin)}
+          style={{
+            display: 'inline-block',
+            position: 'relative',
+          }}
         >
           Mon compte
         </button>
       </div>
       {showLogin && (
-        <div className="login-modal">
-          <Login />
-          <button
-            className="btn btn-secondary"
-            onClick={() => setShowLogin(false)}
-          >
-            Fermer
-          </button>
+        <div
+          className="login-modal"
+          style={{
+            display: 'block', // S'assurer que la fenêtre est affichée
+            position: 'absolute',
+            top: '100%', // Placer au milieu de l'écran
+            left: '50%',
+            transform: 'translate(-50%, 0%)', // Placer la fenêtre juste en dessous du bouton
+            marginTop: '10px', // Un peu d'espace entre le bouton et la fenêtre
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            width: '50%', // La largeur peut être ajustée si nécessaire
+            backgroundColor: 'white', // Couleur de fond de la fenêtre
+            border: "1.5px solid #999", 
+            borderRadius: "20px",
+            padding: '20px', // Espacement à l'intérieur de la fenêtre
+            zIndex: 1000, // S'assurer que la fenêtre s'affiche par-dessus d'autres éléments
+          }}>
+          <Login onSubmit={handleLoginSubmit}/>
         </div>
       )}
     </nav>

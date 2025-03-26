@@ -1,13 +1,16 @@
 import { useState } from "react";
 
-function Login() {
-  const [email, setEmail] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
+interface LoginProps {
+  onSubmit: () => void; // Fonction de callback qui sera appelée lors du clic sur le bouton
+}
 
-  // Définition explicite du type de l'événement
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log({ email, password });
+const Login: React.FC<LoginProps> = ({ onSubmit }) => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault(); // Empêche la soumission du formulaire pour éviter un rechargement
+    onSubmit(); // Appelle la fonction de callback passée en props
   };
 
   return (
@@ -19,9 +22,9 @@ function Login() {
           className="flex flex-col gap-4"
           id="exampleInputEmail1" 
           aria-describedby="emailHelp"
-          style={{ width: "500px", padding: "8px", border: "1.5px solid #999", borderRadius: "20px" }}
-          value={email}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
+          style={{ width: "70%", padding: "8px", border: "1.5px solid #999", borderRadius: "20px" }}
+          value={username}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setUsername(e.target.value)}
         />
       </div>
       
@@ -31,7 +34,7 @@ function Login() {
           type="password" 
           className="flex flex-col gap-4"
           id="exampleInputPassword1"
-          style={{ width: "500px", padding: "8px", border: "1.5px solid #999", borderRadius: "20px" }}
+          style={{ width: "70%", padding: "8px", border: "1.5px solid #999", borderRadius: "20px" }}
           value={password}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
         />
