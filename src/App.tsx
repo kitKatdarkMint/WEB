@@ -13,13 +13,9 @@ function App() {
       <div className="justify-content-center">
         <SearchBar></SearchBar>
       </div>
-<<<<<<< HEAD
       <div className="justify-content-center">
         <LigneRecette></LigneRecette>
       </div>
-      
-=======
->>>>>>> afeac992c3202e80733ba5638b802600cf5599a4
     </Fragment>
   );
 }
