@@ -60,7 +60,7 @@ function Navbar() {
             </ul>
           </div>
         <button type ="button" className ="btn">Mon carnet</button>
-        <button type ="button" className ="btn">Mon compte</button>
+        <button type ="button" className ="btn" onClick = {() => }>Mon compte</button>
         </div>
       </nav>
     );
