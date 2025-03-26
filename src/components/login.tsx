@@ -37,8 +37,10 @@ function Login() {
         />
       </div>
 
-    <button type="submit" className="btn btn-primary">Submit</button>
-    
+      <div className="d-grid gap-2 col-1 mx-auto">
+        <button type="submit" className="btn btn-outline-success">Submit</button>
+      </div>  
+
     </form>
   );
 }

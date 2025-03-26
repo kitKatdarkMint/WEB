@@ -13,7 +13,6 @@ function App() {
       <div className="justify-content-center">
         <SearchBar></SearchBar>
       </div>
-      
     </Fragment>
   );
 }
