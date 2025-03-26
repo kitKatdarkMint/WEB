@@ -40,38 +40,30 @@ function Navbar() {
               </a>
               <ul className="dropdown-menu">
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <a className="dropdown-item" href="/entree.html">
                     Entrée
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <a className="dropdown-item" href="/plats.html">
                     Plat
                   </a>
                 </li>
                 <li>
-                  <hr className="dropdown-divider" />
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
+                  <a className="dropdown-item" href="/dessert.html">
                     Dessert
                   </a>
                 </li>
               </ul>
             </li>
           </ul>
-          <form className="d-flex" role="search">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Rechercher par recette, par ingrédient "
-              aria-label="Search"
-            />
-            <button className="btn btn-outline-success" type="submit">
-              Rechercher
-            </button>
-          </form>
         </div>
+        <button type="button" className="btn">
+          Mon carnet
+        </button>
+        <button type="button" className="btn">
+          Mon compte
+        </button>
       </div>
     </nav>
   );
