@@ -1,10 +1,21 @@
-//import { useState } from 'react'
-//import reactLogo from './assets/react.svg'
-import Navbar from './components/Navbar';
-import './App.css'
+import { Fragment } from "react/jsx-runtime";
+import Navbar from "./components/Navbar";
+import SearchBar from "./components/SearchBar";
+
 
 function App() {
-  return <div><Navbar/></div>;
+  return (
+    <Fragment>
+      <div>
+        <Navbar />
+      </div>
+      
+      <div className="justify-content-center">
+        <SearchBar></SearchBar>
+      </div>
+      
+    </Fragment>
+  );
 }
 
 export default App;
