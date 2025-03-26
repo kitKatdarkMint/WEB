@@ -1,3 +1,5 @@
+import Login from "./Login";
+
 function Navbar() {
     return (
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
