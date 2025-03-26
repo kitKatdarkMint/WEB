@@ -1,6 +1,8 @@
 import Login from "./Login";
+import { useState } from "react";
 
 function Navbar() {
+  const [showLogin, setShowLogin] = useState(false);
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
@@ -63,10 +65,25 @@ function Navbar() {
         <button type="button" className="btn">
           Mon carnet
         </button>
-        <button type="button" className="btn">
+        <button
+          type="button"
+          className="btn"
+          onClick={() => setShowLogin(!showLogin)}
+        >
           Mon compte
         </button>
       </div>
+      {showLogin && (
+        <div className="login-modal">
+          <Login />
+          <button
+            className="btn btn-secondary"
+            onClick={() => setShowLogin(false)}
+          >
+            Fermer
+          </button>
+        </div>
+      )}
     </nav>
   );
 }
