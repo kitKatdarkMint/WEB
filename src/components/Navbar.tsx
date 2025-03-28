@@ -10,7 +10,7 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-          <img src="/src/assets/cuisinsa.png" alt="cuisINSA" width="200" />
+          <img src="/src/assets/RadINSA.png" alt="radINSA" width="200" />
         </a>
         <button
           className="navbar-toggler"
