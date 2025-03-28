@@ -43,22 +43,17 @@ function Navbar() {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Recettes par catégorie
+                Type de sorties
               </a>
               <ul className="dropdown-menu">
                 <li>
                   <a className="dropdown-item" href="/entree.html">
-                    Entrée
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="/plats.html">
-                    Plat
+                    Activités
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="/dessert.html">
-                    Dessert
+                    Restaurants
                   </a>
                 </li>
               </ul>
@@ -73,8 +68,8 @@ function Navbar() {
           className="btn"
           onClick={() => setShowLogin(!showLogin)}
           style={{
-            display: 'inline-block',
-            position: 'relative',
+            display: "inline-block",
+            position: "relative",
           }}
         >
           Mon compte
@@ -84,22 +79,23 @@ function Navbar() {
         <div
           className="login-modal"
           style={{
-            display: 'block', // S'assurer que la fenêtre est affichée
-            position: 'absolute',
-            top: '100%', // Placer au milieu de l'écran
-            left: '50%',
-            transform: 'translate(-50%, 0%)', // Placer la fenêtre juste en dessous du bouton
-            marginTop: '10px', // Un peu d'espace entre le bouton et la fenêtre
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            width: '50%', // La largeur peut être ajustée si nécessaire
-            backgroundColor: 'white', // Couleur de fond de la fenêtre
-            border: "1.5px solid #999", 
+            display: "block", // S'assurer que la fenêtre est affichée
+            position: "absolute",
+            top: "100%", // Placer au milieu de l'écran
+            left: "50%",
+            transform: "translate(-50%, 0%)", // Placer la fenêtre juste en dessous du bouton
+            marginTop: "10px", // Un peu d'espace entre le bouton et la fenêtre
+            marginLeft: "auto",
+            marginRight: "auto",
+            width: "50%", // La largeur peut être ajustée si nécessaire
+            backgroundColor: "white", // Couleur de fond de la fenêtre
+            border: "1.5px solid #999",
             borderRadius: "20px",
-            padding: '20px', // Espacement à l'intérieur de la fenêtre
+            padding: "20px", // Espacement à l'intérieur de la fenêtre
             zIndex: 1000, // S'assurer que la fenêtre s'affiche par-dessus d'autres éléments
-          }}>
-          <Login onSubmit={handleLoginSubmit}/>
+          }}
+        >
+          <Login onSubmit={handleLoginSubmit} />
         </div>
       )}
     </nav>
