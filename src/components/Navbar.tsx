@@ -77,7 +77,7 @@ function Navbar() {
             position: 'relative',
           }}
         >
-          Mon compte
+          Mon budget
         </button>
       </div>
       {showLogin && (
@@ -92,7 +92,7 @@ function Navbar() {
             marginTop: '10px', // Un peu d'espace entre le bouton et la fenêtre
             marginLeft: 'auto',
             marginRight: 'auto',
-            width: '50%', // La largeur peut être ajustée si nécessaire
+            width: '25%', // La largeur peut être ajustée si nécessaire
             backgroundColor: 'white', // Couleur de fond de la fenêtre
             border: "1.5px solid #999", 
             borderRadius: "20px",

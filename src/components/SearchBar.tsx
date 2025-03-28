@@ -5,13 +5,12 @@ function SearchBar() {
         <input
           className="flex flex-col gap-4"
           type="search"
-          placeholder="Rechercher par recette, par ingrédient "
+          placeholder="Rechercher par nom, adresse, type "
           aria-label="Search"
-          style={{ textAlign: "center", width: "80%", padding: "8px", border: "1.5px solid #999", borderRadius: "20px" }}
+          style={{ textAlign: "center", width: "70%", padding: "8px", border: "1.5px solid #999", borderRadius: "20px", marginRight: "10px" }}
         />
-        <br/>
         <button
-          className="btn btn-outline-success justify-content-center"
+          className="btn btn-outline-danger justify-content-center"
           type="submit"
         >
           Rechercher
