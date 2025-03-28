@@ -9,7 +9,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="index.html">
           <img src="/src/assets/RadINSA.png" alt="radINSA" width="200" />
         </a>
         <button
@@ -26,7 +26,7 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              <a className="nav-link active" aria-current="page" href="index.html">
                 Accueil
               </a>
             </li>
@@ -34,6 +34,11 @@ function Navbar() {
               <a className="nav-link" href="#">
                 Suggestion du jour
               </a>
+              <li className="nav-item">
+                <a className="nav-link" href="bonsPlans.html">
+                  Bons Plans Culturels 😎
+                </a>
+              </li>
             </li>
             <li className="nav-item dropdown">
               <a
