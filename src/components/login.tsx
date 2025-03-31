@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-interface LoginProps {
+interface BudgetProps {
   onSubmit: () => void; // Fonction de callback qui sera appelée lors du clic sur le bouton
 }
 
-const Login: React.FC<LoginProps> = ({ onSubmit }) => {
+const Budget: React.FC<BudgetProps> = ({ onSubmit }) => {
   const [budget, setBudget] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -15,9 +15,10 @@ const Login: React.FC<LoginProps> = ({ onSubmit }) => {
   return (
     <form onSubmit={handleSubmit}>
       <div className="mb-3 flex flex-col items-center justify-center h-screen text-center">
-        <label htmlFor="exampleInputEmail1" className="form-label">Votre budget (en euros) : </label>        <input 
+        <label htmlFor="exampleInput" className="form-label">Votre budget (en euros) : </label>        <input 
           type="number" 
           step="any" 
+          min = "0"
           className="appearance-none"
           style={{ width: "25%", padding: "8px", border: "1.5px solid #999", borderRadius: "20px" }}
           value={budget}
@@ -25,17 +26,7 @@ const Login: React.FC<LoginProps> = ({ onSubmit }) => {
         />
       </div>
       
-      {/* <div className="mb-3 flex flex-col items-center justify-center h-screen text-center">
-        <label htmlFor="exampleInputPassword1" className="form-label">Password</label><br/>
-        <input 
-          type="password" 
-          className="flex flex-col gap-4"
-          id="exampleInputPassword1"
-          style={{ width: "70%", padding: "8px", border: "1.5px solid #999", borderRadius: "20px" }}
-          value={password}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
-        />
-      </div> */}
+      
 <div className="form-check form-check-inline">
   <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"/>
   <label className="form-check-label" htmlFor="inlineRadio1">Restaurant</label>
@@ -60,4 +51,4 @@ const Login: React.FC<LoginProps> = ({ onSubmit }) => {
   );
 }
 
-export default Login;
+export default Budget;
