@@ -1,4 +1,8 @@
-function Navbar({ setShowBonsPlans, setShowBudget }) {
+interface Props {
+  setShowBonsPlans: React.Dispatch<React.SetStateAction<boolean>>;
+  setShowBudget: React.Dispatch<React.SetStateAction<boolean>>;
+}
+function Navbar({ setShowBonsPlans, setShowBudget }: Props) {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
@@ -42,7 +46,7 @@ function Navbar({ setShowBonsPlans, setShowBudget }) {
                 className="nav-link"
                 href="#"
                 onClick={() => {
-                  setShowBonsPlans((prev) => !prev);
+                  setShowBonsPlans(true);
                 }}
               >
                 Bons Plans Culturels 😎
