@@ -1,22 +1,21 @@
-import { Fragment } from "react/jsx-runtime";
+import { useState } from "react";
 import Navbar from "./Navbar";
 import SearchBar from "./SearchBar";
-import LigneRecette from"./LigneRecette";
+import BonsPlans from "./BonsPlans";
 
 function App() {
+  const [showBonsPlans, setShowBonsPlans] = useState(false);
   return (
-    <Fragment>
+    <>
       <div>
-        <Navbar />
+        <Navbar setShowBonsPlans={setShowBonsPlans} />
       </div>
 
       <div className="justify-content-center">
         <SearchBar></SearchBar>
       </div>
-      <div className="justify-content-center">
-        <LigneRecette></LigneRecette>
-      </div>
-    </Fragment>
+      {showBonsPlans && <BonsPlans />}
+    </>
   );
 }
 
