@@ -1,8 +1,9 @@
-import Login from "./Login";
 import { useState } from "react";
+import Login from "./Login";
 
-function Navbar() {
+function Navbar({ setShowBonsPlans }) {
   const [showLogin, setShowLogin] = useState(false);
+
   const handleLoginSubmit = () => {
     setShowLogin(false);
   };
@@ -26,7 +27,11 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="index.html">
+              <a
+                className="nav-link active"
+                aria-current="page"
+                href="index.html"
+              >
                 Accueil
               </a>
             </li>
@@ -34,11 +39,17 @@ function Navbar() {
               <a className="nav-link" href="#">
                 Suggestion du jour
               </a>
-              <li className="nav-item">
-                <a className="nav-link" href="bonsPlans.html">
-                  Bons Plans Culturels 😎
-                </a>
-              </li>
+            </li>
+            <li className="nav-item">
+              <a
+                className="nav-link"
+                href="#"
+                onClick={() => {
+                  setShowBonsPlans((prev) => !prev);
+                }}
+              >
+                Bons Plans Culturels 😎
+              </a>
             </li>
             <li className="nav-item dropdown">
               <a
