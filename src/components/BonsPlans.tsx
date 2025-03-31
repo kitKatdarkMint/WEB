@@ -1,7 +1,8 @@
+import "./BonsPlans.css";
 function BonsPlans() {
   return (
     <>
-      <h1> Bons Plans Culturels 🤩</h1>
+      <h1 className="farro-bold text-center"> Bons Plans Culturels 🤩</h1>
       <p>
         Tu es à la recherche de bons plans sans te ruiner ? Tu as envie de
         profiter un max de ta vie étudiante ?<br />
