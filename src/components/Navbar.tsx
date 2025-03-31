@@ -2,7 +2,11 @@ function Navbar({ setShowBonsPlans, setShowBudget }) {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <a
+          className="navbar-brand"
+          href="#"
+          onClick={() => setShowBonsPlans(false)}
+        >
           <img src="/src/assets/RadINSA.png" alt="radINSA" width="200" />
         </a>
         <button
@@ -19,7 +23,12 @@ function Navbar({ setShowBonsPlans, setShowBudget }) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              <a
+                className="nav-link active"
+                aria-current="page"
+                href="#"
+                onClick={() => setShowBonsPlans(false)}
+              >
                 Accueil
               </a>
             </li>
