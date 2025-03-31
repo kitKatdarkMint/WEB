@@ -2,29 +2,20 @@ import { useState } from "react";
 import Navbar from "./Navbar";
 import SearchBar from "./SearchBar";
 import BonsPlans from "./BonsPlans";
-import Login from "./Login";
+import Budget from "./Budget";
 
 function App() {
   const [showBonsPlans, setShowBonsPlans] = useState(false);
-  const [showLogin, setShowLogin] = useState(false);
-
-  const handleLoginSubmit = () => {
-    setShowLogin(false);
-  };
+  const [showBudget, setShowBudget] = useState(false);
 
   return (
     <>
-      <div>
-        <Navbar
-          setShowBonsPlans={setShowBonsPlans}
-          setShowLogin={setShowLogin}
-        />
-      </div>
-      {showLogin && (
-        <div className="login-modal login">
-          <Login onSubmit={handleLoginSubmit} />
-        </div>
-      )}
+      <Navbar
+        setShowBonsPlans={setShowBonsPlans}
+        setShowBudget={setShowBudget}
+      />
+
+      <Budget isPopupOpen={showBudget} setPopupOpen={setShowBudget} />
       <div className="justify-content-center">
         <SearchBar />
       </div>

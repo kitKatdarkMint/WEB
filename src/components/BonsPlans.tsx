@@ -6,7 +6,7 @@ function BonsPlans() {
       <p>
         Tu es à la recherche de bons plans sans te ruiner ? Tu as envie de
         profiter un max de ta vie étudiante ?<br />
-        Alors tu es au bon endroit ? 😉
+        Alors tu es au bon endroit ! 😉
       </p>
       <h2>Pour la boustifaille🍴 </h2>
       <ul>

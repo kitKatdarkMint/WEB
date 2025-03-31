@@ -1,4 +1,4 @@
-function Navbar({ setShowBonsPlans, setShowLogin }) {
+function Navbar({ setShowBonsPlans, setShowBudget }) {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
@@ -70,11 +70,7 @@ function Navbar({ setShowBonsPlans, setShowLogin }) {
         <button
           type="button"
           className="btn"
-          onClick={() => setShowLogin((prev) => !prev)}
-          style={{
-            display: "inline-block",
-            position: "relative",
-          }}
+          onClick={() => setShowBudget(true)}
         >
           Mon budget
         </button>
