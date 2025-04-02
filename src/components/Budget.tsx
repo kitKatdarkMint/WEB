@@ -6,6 +6,7 @@ interface Props {
   isPopupOpen: boolean;
   setPopupOpen: (isOpen: boolean) => void;
 }
+
 function Budget({ isPopupOpen, setPopupOpen }: Props) {
   const [budget, setBudget] = useState("");
 
@@ -15,19 +16,28 @@ function Budget({ isPopupOpen, setPopupOpen }: Props) {
         open={isPopupOpen}
         onClose={() => setPopupOpen(false)}
         modal
-        nested
+        contentStyle={{
+          width: "25%",
+          backgroundColor: "lightgrey", /* Changez la couleur de fond ici */
+          padding: "20px",
+          borderRadius: "50px",
+          display: "flex", /* Activer le modèle Flexbox */
+          justifyContent: "center", /* Centrer les éléments verticalement */
+          height: "auto",
+        }}
+        
       >
-        <div className="popup-content p-5 rounded-lg shadow-lg bg-white">
-          <h2 className="text-lg font-semibold mb-3">Votre budget (€)</h2>
+        <div>
+        <div style={{display:"flex", flexDirection: "column", alignItems: "center", justifyContent: "center"}}>
+          <h3>Votre budget (€)</h3>
           <input
             type="number"
             min="0"
-            className="w-full p-2 border rounded-lg"
             value={budget}
             onChange={(e) => setBudget(e.target.value)}
-          />
-
-          <div className="mt-3 flex justify-center space-x-4">
+          /></div>
+<br/>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "10px" }}>
             <label>
               <input type="radio" name="category" value="restaurant" />
               <span> Restaurant</span>
@@ -37,8 +47,8 @@ function Budget({ isPopupOpen, setPopupOpen }: Props) {
               <span> Activités</span>
             </label>
           </div>
-
-          <div className="flex justify-between mt-4">
+<br/>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "10px" }}>
             <button
               onClick={() => setPopupOpen(false)}
               className="btn btn-secondary"

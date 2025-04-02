@@ -19,6 +19,7 @@ function App() {
       <div className="justify-content-center">
         <SearchBar />
       </div>
+
       {showBonsPlans && <BonsPlans />}
     </>
   );

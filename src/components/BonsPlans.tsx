@@ -21,7 +21,7 @@ function BonsPlans() {
         </li>
         <li>
           {" "}
-          les restau du CROUS sont pas mals aussi si t'es boursier tu paies 1 €
+          Les restos du CROUS sont pas mals non plus, si t'es boursier tu paies 1 €
           sinon t'en as pour 3,30€{" "}
           <p>
             <a href="https://www.crous-lyon.fr/se-restaurer/">
@@ -55,13 +55,13 @@ function BonsPlans() {
           <a href="https://www.lyon.fr/culture/la-carte-bibliotheque">
             Carte Bibliothèque sur Lyon
           </a>{" "}
-          à 7€ valable 1 an donne accès aux différents services des
+          7€, valable 1 an, donne accès aux différents services des
           bibliothèques de la ville de Lyon : emprunt de 20 documents,
           consultation sur place et ressources numériques
         </li>
         <li>
           {" "}
-          Planétarium <strong>gratuit tous les 1er samedi</strong> du mois à
+          Planétarium <strong>gratuit tous les 1er samedis</strong> du mois à
           Vaux-en-Velin{" "}
           <p>
             <a href="https://www.planetariumvv.com/programmation/">
