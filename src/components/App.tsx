@@ -1,22 +1,27 @@
-import { Fragment } from "react/jsx-runtime";
+import { useState } from "react";
 import Navbar from "./Navbar";
 import SearchBar from "./SearchBar";
-import LigneRecette from"./LigneRecette";
+import BonsPlans from "./BonsPlans";
+import Budget from "./Budget";
 
 function App() {
+  const [showBonsPlans, setShowBonsPlans] = useState(false);
+  const [showBudget, setShowBudget] = useState(false);
+
   return (
-    <Fragment>
-      <div>
-        <Navbar />
+    <>
+      <Navbar
+        setShowBonsPlans={setShowBonsPlans}
+        setShowBudget={setShowBudget}
+      />
+
+      <Budget isPopupOpen={showBudget} setPopupOpen={setShowBudget} />
+      <div className="justify-content-center">
+        <SearchBar />
       </div>
 
-      <div className="justify-content-center">
-        <SearchBar></SearchBar>
-      </div>
-      <div className="justify-content-center">
-        <LigneRecette></LigneRecette>
-      </div>
-    </Fragment>
+      {showBonsPlans && <BonsPlans />}
+    </>
   );
 }
 
