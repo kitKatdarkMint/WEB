@@ -1,3 +1,5 @@
+import "./Navbar.css"
+
 interface Props {
   setShowBonsPlans: React.Dispatch<React.SetStateAction<boolean>>;
   setShowBudget: React.Dispatch<React.SetStateAction<boolean>>;

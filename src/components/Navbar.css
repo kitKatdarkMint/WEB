@@ -1,0 +1,14 @@
+.navbar {
+    position: fixed; /* Fixe la navbar en haut */
+    top: 0; /* La place tout en haut */
+    left: 0;
+    width: 100%; /* Occupe toute la largeur */
+    background-color: #fff; /* Couleur de fond */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre pour effet */
+    /*padding: 15px 20px; /* Espacement interne */
+    z-index: 1000; /* S'assure qu'elle est au-dessus du contenu */
+  }
+
+.content {
+padding-top: 60px; /* Ajuste selon la hauteur de ta navbar */
+}
