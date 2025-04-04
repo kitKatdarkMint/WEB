@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import SearchBar from "./SearchBar";
 import BonsPlans from "./BonsPlans";
 import Budget from "./Budget";
+import Footer from "./Footer";
 
 function App() {
   const [showBonsPlans, setShowBonsPlans] = useState(false);
@@ -21,6 +22,7 @@ function App() {
       </div>
 
       {showBonsPlans && <BonsPlans />}
+      <Footer />
     </>
   );
 }
