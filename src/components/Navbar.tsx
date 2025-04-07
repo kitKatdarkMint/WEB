@@ -1,10 +1,11 @@
-import "./Navbar.css"
+import "./Navbar.css";
 
 interface Props {
   setShowBonsPlans: React.Dispatch<React.SetStateAction<boolean>>;
   setShowBudget: React.Dispatch<React.SetStateAction<boolean>>;
+  setShowSuggestion: React.Dispatch<React.SetStateAction<boolean>>;
 }
-function Navbar({ setShowBonsPlans, setShowBudget }: Props) {
+function Navbar({ setShowBonsPlans, setShowBudget, setShowSuggestion }: Props) {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
@@ -33,13 +34,23 @@ function Navbar({ setShowBonsPlans, setShowBudget }: Props) {
                 className="nav-link active"
                 aria-current="page"
                 href="#"
-                onClick={() => setShowBonsPlans(false)}
+                onClick={() => {
+                  setShowBonsPlans(false);
+                  setShowSuggestion(false);
+                }}
               >
                 Accueil
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a
+                className="nav-link"
+                href="#"
+                onClick={() => {
+                  setShowBonsPlans(false);
+                  setShowSuggestion(true);
+                }}
+              >
                 Suggestion du jour
               </a>
             </li>
@@ -49,6 +60,7 @@ function Navbar({ setShowBonsPlans, setShowBudget }: Props) {
                 href="#"
                 onClick={() => {
                   setShowBonsPlans(true);
+                  setShowSuggestion(false);
                 }}
               >
                 Bons Plans Culturels 😎
@@ -67,12 +79,12 @@ function Navbar({ setShowBonsPlans, setShowBudget }: Props) {
               <ul className="dropdown-menu">
                 <li>
                   <a className="dropdown-item" href="#">
-                    Activités
+                    Sortir sur Lyon
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="#">
-                    Restaurants
+                    Se restaurer sur Lyon / Villeurbanne
                   </a>
                 </li>
               </ul>

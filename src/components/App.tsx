@@ -4,27 +4,32 @@ import SearchBar from "./SearchBar";
 import BonsPlans from "./BonsPlans";
 import Budget from "./Budget";
 import Footer from "./Footer";
+import Suggestion from "./Suggestion";
 
 function App() {
   const [showBonsPlans, setShowBonsPlans] = useState(false);
   const [showBudget, setShowBudget] = useState(false);
+  const [showSuggestion, setShowSuggestion] = useState(false);
 
   return (
-    <>
+    <div className="d-flex flex-column min-vh-100">
       <Navbar
         setShowBonsPlans={setShowBonsPlans}
         setShowBudget={setShowBudget}
+        setShowSuggestion={setShowSuggestion}
       />
 
-      <Budget isPopupOpen={showBudget} setPopupOpen={setShowBudget} />
-      <div className="justify-content-center">
-        <SearchBar />
-      </div>
+      <main className="flex-grow-1">
+        <Budget isPopupOpen={showBudget} setPopupOpen={setShowBudget} />
+        <div className="justify-content-center">
+          <SearchBar />
+        </div>
+        {showSuggestion && <Suggestion />}
+        {showBonsPlans && <BonsPlans />}
+      </main>
 
-      {showBonsPlans && <BonsPlans />}
       <Footer />
-    </>
+    </div>
   );
 }
-
 export default App;
