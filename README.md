@@ -53,6 +53,6 @@ export default tseslint.config({
 });
 ```
 
-## Instalations
+## Installations
 
-npm install mongodb
+`npm install mongodb`

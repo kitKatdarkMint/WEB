@@ -4,15 +4,24 @@ interface Props {
   setShowBonsPlans: React.Dispatch<React.SetStateAction<boolean>>;
   setShowBudget: React.Dispatch<React.SetStateAction<boolean>>;
   setShowSuggestion: React.Dispatch<React.SetStateAction<boolean>>;
+  setShowAccueil: React.Dispatch<React.SetStateAction<boolean>>;
 }
-function Navbar({ setShowBonsPlans, setShowBudget, setShowSuggestion }: Props) {
+function Navbar({
+  setShowBonsPlans,
+  setShowBudget,
+  setShowSuggestion,
+  setShowAccueil,
+}: Props) {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
         <a
           className="navbar-brand"
           href="#"
-          onClick={() => setShowBonsPlans(false)}
+          onClick={() => {
+            setShowBonsPlans(false);
+            setShowSuggestion(false);
+          }}
         >
           <img src="/src/assets/RadINSA.png" alt="radINSA" width="200" />
         </a>
@@ -37,6 +46,7 @@ function Navbar({ setShowBonsPlans, setShowBudget, setShowSuggestion }: Props) {
                 onClick={() => {
                   setShowBonsPlans(false);
                   setShowSuggestion(false);
+                  setShowAccueil(true);
                 }}
               >
                 Accueil
@@ -49,6 +59,7 @@ function Navbar({ setShowBonsPlans, setShowBudget, setShowSuggestion }: Props) {
                 onClick={() => {
                   setShowBonsPlans(false);
                   setShowSuggestion(true);
+                  setShowAccueil(false);
                 }}
               >
                 Suggestion du jour
@@ -61,6 +72,7 @@ function Navbar({ setShowBonsPlans, setShowBudget, setShowSuggestion }: Props) {
                 onClick={() => {
                   setShowBonsPlans(true);
                   setShowSuggestion(false);
+                  setShowAccueil(false);
                 }}
               >
                 Bons Plans Culturels 😎
