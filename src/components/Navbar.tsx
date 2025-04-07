@@ -21,6 +21,7 @@ function Navbar({
           onClick={() => {
             setShowBonsPlans(false);
             setShowSuggestion(false);
+            setShowAccueil(true);
           }}
         >
           <img src="/src/assets/RadINSA.png" alt="radINSA" width="200" />
